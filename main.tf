@@ -10,4 +10,3 @@ resource "aws_instance" "terra-rh8" {
     Name = "cesar_terra_rh8"
   }
 }
-
