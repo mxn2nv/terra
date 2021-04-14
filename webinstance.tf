@@ -6,7 +6,7 @@ resource "aws_instance" "terra-web-ubuntu" {
 user_data = <<-EOF
             #!/bin/bash
             echo "Hello, This web server was created using Terraform by Cesar Rodriguez" > index.html
-            nohup busybox httpd -f -p 8080 &
+            nohup busybox httpd -f -p ${var.server_port} &
             EOF
 
   tags = {
